@@ -1,7 +1,7 @@
 # mdung
 
 `mdung` là tên **package ROS 2**.  
-Vì vậy dù người khác `git clone` repo này về với tên thư mục khác, sau khi build và source thì vẫn chạy bằng:
+Khi `git clone` repo này về với tên thư mục khác, sau khi build và source thì vẫn chạy bằng:
 
 ```bash
 ros2 launch mdung gazebo.launch.py
