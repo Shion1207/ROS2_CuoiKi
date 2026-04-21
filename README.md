@@ -194,12 +194,6 @@ ros2 topic echo /scan
 ros2 topic list | grep camera
 ```
 
-### IMU
-
-```bash
-ros2 topic echo /imu
-```
-
 ### Encoder
 
 ```bash
