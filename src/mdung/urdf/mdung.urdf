@@ -1,0 +1,696 @@
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mdung">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="4.22342881486748" />
+      <inertia
+        ixx="0.035"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="0.065"
+        iyz="0.0"
+        izz="0.08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+          <mesh
+            filename="package://mdung/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 -0.015"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.24 0.08" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="RW">
+    <inertial>
+      <origin
+        xyz="-2.42861286636753E-17 0.0175 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.127814655744215" />
+      <inertia
+        ixx="5.18772440579972E-05"
+        ixy="1.6191513075841E-20"
+        ixz="1.15724798279264E-20"
+        iyy="7.76590416759087E-05"
+        iyz="-1.01543683474606E-20"
+        izz="5.18772440579972E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/RW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/RW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RW_joint"
+    type="continuous">
+    <origin
+      xyz="-0.13441 -0.17 -0.088399"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RW" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LW">
+    <inertial>
+      <origin
+        xyz="3.46944695195361E-18 -0.0175 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.127814655744214" />
+      <inertia
+        ixx="5.18772440579972E-05"
+        ixy="-1.01459446592225E-21"
+        ixz="1.27727198623066E-20"
+        iyy="7.76590416759086E-05"
+        iyz="7.57967433286311E-22"
+        izz="5.18772440579971E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/LW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/LW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LW_joint"
+    type="continuous">
+    <origin
+      xyz="-0.13441 0.165 -0.088399"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LW" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="linkage">
+    <inertial>
+      <origin
+        xyz="0.0671475698089102 -0.000143819869407702 -0.0736480524619351"
+        rpy="0 0 0" />
+      <mass
+        value="0.535094285176239" />
+      <inertia
+        ixx="0.00298112808850093"
+        ixy="-2.916549990347E-08"
+        ixz="-5.27451926535166E-06"
+        iyy="0.000489874783431546"
+        iyz="5.76475572327814E-07"
+        izz="0.00278122487738629" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/linkage.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/linkage.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="linkage_joint"
+    type="revolute">
+    <origin
+      xyz="0.033564 0 0.0216"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="linkage" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1.0" />
+    <dynamics
+      damping="8.0"
+      friction="4.0" />
+  </joint>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.00649040032601172 0.121778576823298 2.29900859460841E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.669052766862573" />
+      <inertia
+        ixx="0.00418900391937431"
+        ixy="-0.000200213345357942"
+        ixz="-9.79097624779165E-12"
+        iyy="0.000443096454392364"
+        iyz="-1.83706873545477E-10"
+        izz="0.00390272125104691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.07674 0 0.077048"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="1.0" />
+    <dynamics
+      damping="8.0"
+      friction="4.0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="3.29548366373444E-09 1.23809969165833E-07 0.0415869936181787"
+        rpy="0 0 0" />
+      <mass
+        value="0.300434365002562" />
+      <inertia
+        ixx="0.00208883031374896"
+        ixy="-2.76150637416256E-10"
+        ixz="1.40135464745794E-09"
+        iyy="0.00210939612790582"
+        iyz="-4.71142453587787E-09"
+        izz="6.12668433861055E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link2_joint"
+    type="prismatic">
+    <origin
+      xyz="0.014199 0.26642 0"
+      rpy="1.5708 0 1.5175" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0.0"
+      upper="0.15"
+      effort="10"
+      velocity="0.2" />
+    <dynamics
+      damping="20.0"
+      friction="10.0" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="0 0 -0.0171031205794598"
+        rpy="0 0 0" />
+      <mass
+        value="0.0511424493281645" />
+      <inertia
+        ixx="1.08809805513997E-05"
+        ixy="3.07555459021744E-38"
+        ixz="-2.93592764823433E-38"
+        iyy="1.08809805513997E-05"
+        iyz="1.62357573556286E-22"
+        izz="1.25334631183778E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.033564 0 0.071749"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera">
+    <inertial>
+      <origin
+        xyz="1.84389585033418E-05 0.000433986696179528 -0.0228014952883099"
+        rpy="0 0 0" />
+      <mass
+        value="0.065481897559236" />
+      <inertia
+        ixx="1.13058464616254E-05"
+        ixy="-4.84668587634111E-09"
+        ixz="-2.45164001948719E-08"
+        iyy="3.54537738983754E-05"
+        iyz="6.27811871082461E-09"
+        izz="3.04926245634917E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.250980392156863 0.250980392156863 0.250980392156863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mdung/meshes/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.22 0 -0.020439"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_sensor_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.001" />
+      <inertia
+        ixx="1e-6"
+        ixy="0"
+        ixz="0"
+        iyy="1e-6"
+        iyz="0"
+        izz="1e-6" />
+    </inertial>
+  </link>
+  <joint
+    name="camera_sensor_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="camera" />
+    <child
+      link="camera_sensor_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.01" />
+      <inertia
+        ixx="1e-6"
+        ixy="0"
+        ixz="0"
+        iyy="1e-6"
+        iyz="0"
+        izz="1e-6" />
+    </inertial>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.03"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <gazebo reference="base_link">
+    <gravity>false</gravity>
+    <selfCollide>false</selfCollide>
+  </gazebo>
+
+  <gazebo reference="camera">
+    <gravity>false</gravity>
+  </gazebo>
+
+  <gazebo reference="lidar">
+    <gravity>false</gravity>
+  </gazebo>
+
+  <gazebo reference="linkage">
+    <gravity>false</gravity>
+  </gazebo>
+
+  <gazebo reference="link1">
+    <gravity>false</gravity>
+  </gazebo>
+
+  <gazebo reference="link2">
+    <gravity>false</gravity>
+  </gazebo>
+
+  <gazebo reference="RW">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+  </gazebo>
+
+  <gazebo reference="LW">
+    <mu1>1.0</mu1>
+    <mu2>1.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+  </gazebo>
+
+  <gazebo reference="imu_link">
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <visualize>false</visualize>
+      <update_rate>50.0</update_rate>
+      <imu>
+        <angular_velocity>
+          <x><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></x>
+          <y><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></y>
+          <z><noise type="gaussian"><mean>0.0</mean><stddev>0.0002</stddev></noise></z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x><noise type="gaussian"><mean>0.0</mean><stddev>0.0004</stddev></noise></x>
+          <y><noise type="gaussian"><mean>0.0</mean><stddev>0.0004</stddev></noise></y>
+          <z><noise type="gaussian"><mean>0.0</mean><stddev>0.0004</stddev></noise></z>
+        </linear_acceleration>
+      </imu>
+      <plugin name="mdung_imu" filename="libgazebo_ros_imu_sensor.so">
+        <ros>
+          <remapping>~/out:=imu</remapping>
+        </ros>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="lidar">
+    <sensor name="lidar_sensor" type="ray">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>10.0</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14159</min_angle>
+            <max_angle>3.14159</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.12</min>
+          <max>8.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="mdung_lidar" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <remapping>~/out:=scan</remapping>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>lidar</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="camera_sensor_link">
+    <sensor name="camera_sensor" type="camera">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <update_rate>20.0</update_rate>
+      <camera>
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>640</width>
+          <height>480</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.05</near>
+          <far>30.0</far>
+        </clip>
+      </camera>
+      <plugin name="mdung_camera" filename="libgazebo_ros_camera.so">
+        <ros>
+          <remapping>image_raw:=image_raw</remapping>
+          <remapping>camera_info:=camera_info</remapping>
+        </ros>
+        <frame_name>camera_sensor_link</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <joint name="RW_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="LW_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="linkage_joint">
+      <command_interface name="position">
+        <param name="min">-1.57</param>
+        <param name="max">1.57</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="link1_joint">
+      <command_interface name="position">
+        <param name="min">-1.57</param>
+        <param name="max">1.57</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="link2_joint">
+      <command_interface name="position">
+        <param name="min">0.0</param>
+        <param name="max">0.15</param>
+      </command_interface>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin name="mdung_planar_move" filename="libgazebo_ros_planar_move.so">
+      <ros>
+        <remapping>cmd_vel:=cmd_vel</remapping>
+        <remapping>odom:=odom</remapping>
+      </ros>
+      <update_rate>100</update_rate>
+      <publish_rate>30</publish_rate>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+      <covariance_x>0.0001</covariance_x>
+      <covariance_y>0.0001</covariance_y>
+      <covariance_yaw>0.001</covariance_yaw>
+    </plugin>
+
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <robot_param>robot_description</robot_param>
+      <robot_param_node>robot_state_publisher</robot_param_node>
+      <parameters>$(find mdung)/config/controllers.yaml</parameters>
+      <hold_joints>true</hold_joints>
+    </plugin>
+  </gazebo>
+</robot>

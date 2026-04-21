@@ -1,0 +1,42 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    use_sim_time: true
+
+    # Khai báo danh sách và loại controller ở đây
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    axle_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+# Cấu hình chi tiết cho từng controller nằm ở ngoài
+arm_controller:
+  ros__parameters:
+    joints:
+      - link1_joint
+      - link2_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_partial_joints_goal: false
+    open_loop_control: true
+
+axle_controller:
+  ros__parameters:
+    joints:
+      - linkage_joint
+      - LW_joint
+      - RW_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    allow_partial_joints_goal: false
+    open_loop_control: true
