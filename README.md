@@ -17,7 +17,6 @@ Package ROS 2 mô phỏng robot `car-like` tích hợp:
 - cảm biến:
   - `LiDAR`
   - `Camera`
-  - `IMU`
   - `Encoder` giả lập từ trạng thái chuyển động
 
 Project dùng `ROS 2 Humble`, `Gazebo Classic` và `RViz2`.
