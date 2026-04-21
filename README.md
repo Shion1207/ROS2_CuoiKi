@@ -23,7 +23,7 @@ Project dùng `ROS 2 Humble`, `Gazebo Classic` và `RViz2`.
 
 ## Chạy nhanh
 
-Nếu đã cài đủ ROS 2 Humble và dependency, người khác clone repo về có thể chạy nhanh theo các lệnh sau:
+Nếu đã cài đủ ROS 2 Humble và dependency, người khác clone repo về có thể chạy lệnh ĐẦY ĐỦ sau:
 
 ```bash
 cd /path/to/repo_root
