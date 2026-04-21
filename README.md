@@ -134,7 +134,7 @@ source /opt/ros/humble/setup.bash
 source install/setup.bash
 export ROS_DOMAIN_ID=23
 export ROS_LOCALHOST_ONLY=1
-rqt_image_view
+rqt_image_view ( hoặc qrt tùy máy ) sau đó quay cam về 90 độ theo chiều kim đồng hồ
 ```
 
 Sau đó chọn topic ảnh:
